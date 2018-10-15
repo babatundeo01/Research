@@ -1,0 +1,37 @@
+What are the three main forms of storage?
+
+Internal file storage: Store app-private files on the device file system.
+External file storage: Store files on the shared external file system. This is usually for shared user files, such as photos.
+Shared preferences: Store private primitive data in key-value pairs.
+SQLite Databases: Store structured data in a private database.
+
+What is SQLite OpenHelper?
+
+It is a helper class that is used to manage database creation and version management. A subclass that implements the onCreate(SQLiteDatabase), onUpgrade(SQLiteDatabase, int, int) and optionally onOpen(SQLiteDatabase) methods has to be created and this class takes care of opening the database if it exists, creating it if it does not, and upgrading it as necessary. Transactions are used to make sure the database is always in a sensible state.
+This class makes it easy for Content Provider implementations to defer opening and upgrading the database until first use, to avoid blocking application startup with long-running database upgrades.
+
+What is ORM?
+
+Object-Relational Mapping (ORM) is a programming technique in which a metadata descriptor is used to connect codes written in object-oriented programming (OOP) languages such as Java or C# to a relational database. ORM converts data between type systems that are unable to coexist within relational databases and OOP languages.
+It is efficient as it allows developers avoid the struggle of developing queries by concatenating strings or handling the connections with database manually.
+
+ORM options in android
+•	Room
+•	ORMLite
+•	ActiveAndroid
+•	greenDAO
+•	SugarORM
+•	DBFlow
+•	RushORM
+•	Requery
+•	Ollie
+•	Realm
+
+What are runtime permission?
+
+The purpose of a permission is to protect the privacy of an Android user. Android apps must request permission to access sensitive user data (such as contacts and SMS), as well as certain system features (such as camera and internet). Depending on the feature, the system might grant the permission automatically or might prompt the user to approve the request. The process of the system prompting the user to approve a request is called runtime permission.
+
+Explain the two main categories of permission
+
+•	Normal Permission: The default value. A lower-risk permission that gives requesting applications access to isolated application-level features, with minimal risk to other applications, the system, or the user. The system automatically grants this type of permission to a requesting application at installation, without asking for the user's explicit approval (though the user always has the option to review these permissions before installing).
+•	Dangerous Permission: This is a higher-risk permission that would give a requesting application access to private user data or control over the device that can negatively impact the user. Because this type of permission introduces potential risk, the system may not automatically grant it to the requesting application. For example, any dangerous permissions requested by an application may be displayed to the user and require confirmation before proceeding, or some other approach may be taken to avoid the user automatically allowing the use of such facilities.
